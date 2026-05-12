@@ -157,7 +157,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     return 0
 
   if not args.force:
-    logger.debug('Changes possible. Rerun command with -f/--force to execute')
+    logger.info('Changes possible. Rerun command with -f/--force to execute')
     return 0
 
   
