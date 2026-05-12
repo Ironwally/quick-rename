@@ -153,11 +153,12 @@ def main(argv: Sequence[str] | None = None) -> int:
       return 2
     
   if args.dry_run:
-    logger.debug('Finished dry-run only')
+    logger.debug('Ran dry-run only')
     return 0
 
   if not args.force:
-    logger.info('Changes possible. Rerun command with -f/--force to execute')
+    if changes:
+      logger.info('Changes possible. Rerun command with -f/--force to execute')
     return 0
 
   
