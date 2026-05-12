@@ -165,7 +165,7 @@ def main(argv: Sequence[str] | None = None) -> int:
   for old_name, new_name in changes.items():
     os.rename(old_name, new_name)
   
-  logger.debug('Finished renaming')
+  logger.info('Changes successful')
   return 0
 
 
