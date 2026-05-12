@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
-"""regex_rename_recursive
+"""quick_rename
 
 Rename files (and optionally directories) by applying a regex substitution to each
 item's name.
 
 Positional arguments:
-  1) PATH: Wildcard path to files and folders to rename
-  2) REGEX: Python regex pattern applied to each basename
-  3) REPLACEMENT (optional): replacement string for re.sub (default: "")
-
+  1) REGEX: Python regex pattern applied to each basename
+  2) REPLACEMENT (optional): replacement string for re.sub (default: "")
+  3) PATH: Wildcard path to files and folders to rename
+  
 Options:
   -r/--recursive   Recurse into subdirectories when PATH is a directory
   --rename-dirs    Also rename directories
