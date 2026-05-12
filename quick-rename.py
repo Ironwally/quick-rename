@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""quick_rename
+"""quick-rename
 
 Rename files (and optionally directories) by applying a regex substitution to each
 item's name.
@@ -45,7 +45,7 @@ class RenameOp:
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.StreamHandler(sys.stdout))
-logging.basicConfig(filename='rename.log', level=logging.INFO)
+logging.basicConfig(filename='$HOME/.local/quick-rename.log', level=logging.INFO)
 
 def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
   parser = argparse.ArgumentParser(
