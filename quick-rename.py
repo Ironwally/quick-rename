@@ -45,7 +45,7 @@ class RenameOp:
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.StreamHandler(sys.stdout))
-logging.basicConfig(filename='$HOME/.local/quick-rename.log', level=logging.INFO)
+logging.basicConfig(filename='quick-rename.log', level=logging.INFO)
 
 def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
   parser = argparse.ArgumentParser(
