@@ -152,9 +152,14 @@ def main(argv: Sequence[str] | None = None) -> int:
       logger.info(f"Error: {new_name} already exists")
       return 2
     
-  if args.dry_run or not args.force:
+  if args.dry_run:
     logger.debug('Finished dry-run only')
     return 0
+
+  if not args.force:
+    logger.debug('Changes possible. Rerun command with -f/--force to execute')
+    return 0
+
   
   logger.debug("renaming")
   for old_name, new_name in changes.items():
